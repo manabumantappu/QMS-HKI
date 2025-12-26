@@ -95,3 +95,40 @@ footer {
   color: #666;
   border-top: 1px solid #ddd;
 }
+.content {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.content h2 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #1f3c88;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 5px;
+}
+
+.doc-list {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.doc-list li {
+  margin: 8px 0;
+}
+
+.doc-list a {
+  text-decoration: none;
+  color: #333;
+  padding: 6px 8px;
+  display: inline-block;
+}
+
+.doc-list a:hover {
+  background: #eef2fa;
+  border-left: 4px solid #1f3c88;
+}
+
+
