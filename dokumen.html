@@ -9,6 +9,13 @@
 
 <body>
 
+  <script>
+  const role = localStorage.getItem("qms_role");
+  if (!role) {
+    window.location.href = "login.html";
+  }
+</script>
+
 <!-- HEADER -->
 <header class="top-header">
   <img src="assets/img/logo-hki.png" class="logo">
