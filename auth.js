@@ -18,3 +18,8 @@ function setRole(role) {
   localStorage.setItem("qms_role", role);
   window.location.href = "dokumen.html";
 }
+const role = localStorage.getItem("qms_role");
+
+if (role === "operator") {
+  document.querySelectorAll(".qc-only").forEach(e => e.style.display = "none");
+}
