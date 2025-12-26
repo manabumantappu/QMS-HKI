@@ -1,5 +1,19 @@
+function isMobile() {
+  return window.innerWidth <= 768;
+}
+
 function openPDF(path) {
-  document.getElementById("pdfViewer").src = path;
+  const viewer = document.getElementById("pdfViewer");
+  const mobileBtn = document.getElementById("mobileOpenBtn");
+
+  if (isMobile()) {
+    // HP: buka tab baru
+    window.open(path, "_blank");
+  } else {
+    // PC / Tablet: embed
+    viewer.src = path;
+    mobileBtn.href = path;
+  }
 }
 
 /* SEARCH */
