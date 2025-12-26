@@ -9,81 +9,74 @@
 
 <body>
 
+<!-- HEADER -->
 <header class="top-header">
-  <div class="header-container">
-    <img src="assets/img/logo-hki.png" alt="Logo HKI" class="logo">
-    <div>
-      <h1>Dokumen QMS HKI</h1>
-      <p>Quality Management System</p>
-    </div>
+  <img src="assets/img/logo-hki.png" class="logo">
+  <div>
+    <h1>QMS HKI</h1>
+    <p>Quality Management System</p>
   </div>
 </header>
 
+<div class="layout">
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+  <h3>Menu</h3>
+  <a href="#A">Pendidikan & SDM</a>
+  <a href="#B">Produksi & Proses</a>
+  <a href="#C">Kualitas</a>
+  <a href="#D">Inspeksi</a>
+  <a href="#E">Material</a>
+  <a href="#F">Teknik</a>
+  <a href="#G">Manajemen Dokumen</a>
+</aside>
+
+<!-- CONTENT -->
 <main class="content">
 
-<section class="qms-section">
-<h2>A. Pendidikan & SDM</h2>
-<ul>
-<li><a href="#">HSQ-001 – Pedoman Pelaksanaan Pendidikan / Pelatihan</a></li>
-<li><a href="#">HSQ-060 – Pedoman Pergantian Operator / Pekerja</a></li>
-</ul>
+<input type="text" id="searchInput" placeholder="Cari dokumen (HSQ-xxx / judul)">
+
+<section id="A" class="qms-section">
+<h2>Pendidikan & SDM</h2>
+<a onclick="openPDF('assets/pdf/A_Pendidikan/HSQ-001.pdf')">HSQ-001 – Pendidikan / Pelatihan</a>
+<a onclick="openPDF('assets/pdf/A_Pendidikan/HSQ-060.pdf')">HSQ-060 – Pergantian Operator</a>
 </section>
 
-<section class="qms-section">
-<h2>B. Produksi & Proses</h2>
-<ul>
-<li><a href="#">HSQ-010 – Pengelolaan Jig</a></li>
-<li><a href="#">HSQ-020 – Produk Awal (Hatsumono)</a></li>
-<li><a href="#">HSQ-021 – Titik Perubahan</a></li>
-<li><a href="#">HSQ-090 – Jaminan Proses Produksi</a></li>
-<li><a href="#">HSQ-180 – Program Laser</a></li>
-</ul>
+<section id="B" class="qms-section">
+<h2>Produksi & Proses</h2>
+<a onclick="openPDF('assets/pdf/B_Produksi/HSQ-010.pdf')">HSQ-010 – Pengelolaan Jig</a>
+<a onclick="openPDF('assets/pdf/B_Produksi/HSQ-020.pdf')">HSQ-020 – Produk Awal</a>
+<a onclick="openPDF('assets/pdf/B_Produksi/HSQ-021.pdf')">HSQ-021 – Titik Perubahan</a>
+<a onclick="openPDF('assets/pdf/B_Produksi/HSQ-090.pdf')">HSQ-090 – Jaminan Proses</a>
+<a onclick="openPDF('assets/pdf/B_Produksi/HSQ-180.pdf')">HSQ-180 – Program Laser</a>
 </section>
 
-<section class="qms-section">
-<h2>C. Kualitas & Ketidaksesuaian</h2>
-<ul>
-<li><a href="#">HSQ-030 – Tindakan Korektif</a></li>
-<li><a href="#">HSQ-031 – Ketidaksesuaian Produk</a></li>
-<li><a href="#">HSQ-040 – Mutu Internal</a></li>
-<li><a href="#">HSQ-080 – Laporan Cacat</a></li>
-<li><a href="#">HSQ-170 – Barang Tertunda</a></li>
-</ul>
+<section id="C" class="qms-section">
+<h2>Kualitas & Ketidaksesuaian</h2>
+<a onclick="openPDF('assets/pdf/C_Kualitas/HSQ-030.pdf')">HSQ-030 – Tindakan Korektif</a>
+<a onclick="openPDF('assets/pdf/C_Kualitas/HSQ-031.pdf')">HSQ-031 – Ketidaksesuaian Produk</a>
+<a onclick="openPDF('assets/pdf/C_Kualitas/HSQ-040.pdf')">HSQ-040 – Mutu Internal</a>
+<a onclick="openPDF('assets/pdf/C_Kualitas/HSQ-080.pdf')">HSQ-080 – Laporan Cacat</a>
+<a onclick="openPDF('assets/pdf/C_Kualitas/HSQ-170.pdf')">HSQ-170 – Barang Tertunda</a>
 </section>
 
-<section class="qms-section">
-<h2>D. Inspeksi, Alat & Peralatan</h2>
-<ul>
-<li><a href="#">HSQ-011 – Pemeriksaan Mold</a></li>
-<li><a href="#">HSQ-100 – Standar Inspeksi</a></li>
-<li><a href="#">HSQ-110 – Alat Ukur</a></li>
-<li><a href="#">HSQ-120 – Pemeriksaan Berkala</a></li>
-<li><a href="#">HSQ-140 – Kunci Torsi</a></li>
-</ul>
-</section>
-
-<section class="qms-section">
-<h2>E. Material & Vendor</h2>
-<ul>
-<li><a href="#">HSQ-130 – Material / Bahan</a></li>
-<li><a href="#">HSQ-150 – Pemilihan Vendor</a></li>
-<li><a href="#">HSQ-160 – Subkontrak</a></li>
-</ul>
-</section>
-
-<section class="qms-section">
-<h2>F. Dokumen Teknik & Drawing</h2>
-<ul>
-<li><a href="#">HSQ-070 – Drawing & KES</a></li>
-<li><a href="#">HS-003 – Gambar Teknik</a></li>
-</ul>
+<section id="G" class="qms-section">
+<h2>Manajemen Dokumen</h2>
+<a onclick="openPDF('assets/pdf/G_Manajemen_Dokumen/HS-001.pdf')">HS-001 – Format Pedoman</a>
+<a onclick="openPDF('assets/pdf/G_Manajemen_Dokumen/HS-002.pdf')">HS-002 – Format SPK</a>
 </section>
 
 </main>
 
-<footer>
-© HKI – Internal Use Only
-</footer>
+<!-- PDF VIEWER -->
+<aside class="viewer">
+  <p>📄 PDF Viewer</p>
+  <iframe id="pdfViewer"></iframe>
+</aside>
 
+</div>
+
+<script src="app.js"></script>
 </body>
 </html>
