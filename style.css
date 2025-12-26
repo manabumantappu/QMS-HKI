@@ -183,3 +183,16 @@ body {
   height: auto;
   object-fit: contain;
 }
+.logout-btn {
+  background: #c62828;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 13px;
+}
+
+.logout-btn:hover {
+  background: #b71c1c;
+}
