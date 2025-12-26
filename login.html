@@ -14,14 +14,40 @@
   <h2>QMS HKI</h2>
   <p>Quality Management System</p>
 
-  <input type="text" id="username" placeholder="Username">
-  <input type="password" id="password" placeholder="Password">
+ <input type="email" id="username" placeholder="Email">
+<input type="password" id="password" placeholder="Password">
+<button onclick="login()">Login</button>
 
-  <button onclick="login()">Login</button>
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js";
+import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-auth.js";
 
-  <p class="login-note">Internal Use Only</p>
-</div>
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyDh41eDkNZbKrYCAo8wOE0DEe0UyOZIulA",
+  authDomain: "qms-hki.firebaseapp.com",
+  projectId: "qms-hki",
+  storageBucket: "qms-hki.firebasestorage.app",
+  messagingSenderId: "718676500560",
+  appId: "1:718676500560:web:4eb93417bd3f5c14d1f155"
+};
 
-<script src="auth.js"></script>
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+
+window.login = function () {
+  const email = document.getElementById("username").value;
+  const password = document.getElementById("password").value;
+
+  signInWithEmailAndPassword(auth, email, password)
+    .then(() => {
+      window.location.href = "dokumen.html";
+    })
+    .catch(err => {
+      alert("Login gagal: " + err.message);
+    });
+};
+</script>
+
 </body>
 </html>
