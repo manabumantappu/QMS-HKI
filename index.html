@@ -1,42 +1,51 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<title>QMS HKI | Dashboard</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>QMS HKI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="landing-page">
 
 <header class="top-header">
-  <div class="header-left">
-    <!-- GANTI src LOGO -->
-   <img src="assets/img/logo-hki.png" alt="Logo HKI" class="logo">
-  </div>
-  <div class="header-right">
+  <img src="assets/img/logo-hki.png" class="logo" alt="HKI Logo">
+  <div>
     <h1>QMS HKI</h1>
     <p>Quality Management System</p>
   </div>
 </header>
 
-<main class="dashboard">
+<main class="landing-content">
 
-  <section class="card">
-    <h2>📄 Dokumen QMS</h2>
-    <p>Lihat dan buka dokumen SOP, WI, dan Formulir.</p>
-    <a href="dokumen.html" class="btn">Buka</a>
-  </section>
+  <h2>Selamat Datang</h2>
+  <p class="landing-desc">
+    Sistem internal untuk pengelolaan dokumen SOP, WI, dan Formulir
+    di lingkungan PT HKI.
+  </p>
 
-  <section class="card">
-    <h2>ℹ️ Tentang Sistem</h2>
-    <p>Informasi sistem QMS dan penggunaan internal.</p>
-    <a href="#" class="btn secondary">Buka</a>
-  </section>
+  <div class="landing-cards">
+
+    <div class="landing-card">
+      <h3>📄 Dokumen QMS</h3>
+      <p>Lihat dan kelola dokumen SOP, WI, dan Formulir.</p>
+    </div>
+
+    <div class="landing-card">
+      <h3>ℹ️ Tentang Sistem</h3>
+      <p>Informasi penggunaan sistem QMS untuk internal.</p>
+    </div>
+
+  </div>
+
+  <a href="login.html" class="btn-login-main">
+    🔐 Masuk ke Sistem
+  </a>
 
 </main>
 
-<footer>
+<footer class="landing-footer">
   © HKI – Internal Use Only
 </footer>
 
