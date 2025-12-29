@@ -18,6 +18,18 @@ body {
   align-items: center;
   gap: 20px;
 }
+/* ===== HEADER TEXT SPACING (TAMBAHAN) ===== */
+.top-header h1 {
+  margin: 0;
+  font-size: 22px;
+  line-height: 1.2;   /* bikin rapat ke bawah */
+}
+
+.top-header p {
+  margin: 2px 0 0;    /* jarak atas diperkecil */
+  font-size: 13px;
+  opacity: 0.9;
+}
 
 .logo {
   height: 50px;
