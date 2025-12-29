@@ -96,6 +96,16 @@ body {
 .qms-section a:hover {
   background: #eef2ff;
 }
+/* ===== ACTIVE DOCUMENT ===== */
+.qms-section a.active {
+  background: #1f3c88;
+  color: white;
+  border-radius: 4px;
+}
+
+.qms-section a.active:hover {
+  background: #162e66;
+}
 
 /* ===== PDF VIEWER ===== */
 .viewer {
