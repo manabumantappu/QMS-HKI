@@ -223,3 +223,23 @@ body {
 .logout-btn:hover {
   background: #b71c1c;
 }
+.viewer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.open-new-tab {
+  font-size: 13px;
+  text-decoration: none;
+  color: #1f3c88;
+  border: 1px solid #1f3c88;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.open-new-tab:hover {
+  background: #1f3c88;
+  color: white;
+}
