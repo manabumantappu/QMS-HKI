@@ -1,10 +1,15 @@
+/* ===== RESET & GLOBAL ===== */
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   background: #f4f6f9;
 }
 
-/* HEADER */
+/* ===== HEADER ===== */
 .top-header {
   background: #1f3c88;
   color: white;
@@ -14,15 +19,18 @@ body {
   gap: 20px;
 }
 
-.logo { height: 50px; }
+.logo {
+  height: 50px;
+  width: auto;
+}
 
-/* LAYOUT */
+/* ===== LAYOUT ===== */
 .layout {
   display: flex;
   height: calc(100vh - 80px);
 }
 
-/* SIDEBAR */
+/* ===== SIDEBAR ===== */
 .sidebar {
   width: 220px;
   background: #fff;
@@ -46,7 +54,7 @@ body {
   color: #1f3c88;
 }
 
-/* CONTENT */
+/* ===== CONTENT ===== */
 .content {
   flex: 1;
   padding: 20px;
@@ -55,11 +63,11 @@ body {
 
 #searchInput {
   width: 100%;
-  padding: 10px;
+  padding: 10px 12px;
   margin-bottom: 20px;
 }
 
-/* SECTION */
+/* ===== SECTION ===== */
 .qms-section {
   background: #fff;
   padding: 15px;
@@ -69,7 +77,7 @@ body {
 
 .qms-section a {
   display: block;
-  padding: 6px;
+  padding: 6px 8px;
   cursor: pointer;
 }
 
@@ -77,7 +85,7 @@ body {
   background: #eef2ff;
 }
 
-/* VIEWER */
+/* ===== PDF VIEWER ===== */
 .viewer {
   width: 40%;
   border-left: 1px solid #ddd;
@@ -90,9 +98,9 @@ body {
   height: 100%;
   border: none;
 }
+
 /* ===== MOBILE MODE ===== */
 @media (max-width: 768px) {
-
   .layout {
     flex-direction: column;
     height: auto;
@@ -128,61 +136,80 @@ body {
 .mobile-open {
   display: none;
 }
-/* ===== LOGIN ===== */
+
+/* ===== LOGIN PAGE ===== */
 .login-page {
   background: #1f3c88;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .login-box {
-  background: white;
+  background: #ffffff;
   padding: 30px;
-  width: 320px;
+  width: 100%;
+  max-width: 360px;
   text-align: center;
-  border-radius: 6px;
+  border-radius: 8px;
+  margin: auto;
 }
 
+/* ===== LOGO ===== */
 .login-logo {
-  height: 60px;
+  max-width: 180px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
   margin-bottom: 10px;
 }
 
+/* ===== LOGIN TEXT ===== */
 .login-box h2 {
   margin: 10px 0 5px;
   color: #1f3c88;
 }
 
-.login-box input {
-  width: 100%;
-  padding: 10px;
-  margin: 8px 0;
+.login-box p {
+  margin: 0 0 15px;
 }
 
+/* ===== INPUT & BUTTON (INI BAGIAN PENTING) ===== */
+.login-box input,
 .login-box button {
   width: 100%;
-  padding: 10px;
+  padding: 12px 14px;
+  margin: 10px 0;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+/* INPUT */
+.login-box input {
+  border: 1px solid #ccc;
+}
+
+/* BUTTON */
+.login-box button {
   background: #1f3c88;
   color: white;
   border: none;
   cursor: pointer;
 }
 
+.login-box button:hover {
+  background: #162e66;
+}
+
+/* NOTE */
 .login-note {
   font-size: 12px;
   color: #666;
   margin-top: 10px;
 }
-/* ===== LOGO HKI ===== */
-.logo,
-.login-logo {
-  max-width: 180px;   /* BATAS AMAN DESKTOP */
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-}
+
+/* ===== LOGOUT BUTTON ===== */
 .logout-btn {
   background: #c62828;
   color: white;
