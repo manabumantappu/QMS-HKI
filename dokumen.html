@@ -21,64 +21,65 @@
 
 <div class="layout">
 
-<!-- SIDEBAR -->
-<aside class="sidebar">
-  <h3>Menu</h3>
-  <a href="#A">Pendidikan & SDM</a>
-  <a href="#B">Produksi & Proses</a>
-  <a href="#C">Kualitas</a>
-  <a href="#G">Manajemen Dokumen</a>
-</aside>
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <h3>Menu</h3>
+    <a href="#A">Pendidikan & SDM</a>
+    <a href="#B">Produksi & Proses</a>
+    <a href="#C">Kualitas</a>
+    <a href="#G">Manajemen Dokumen</a>
+  </aside>
 
-<!-- CONTENT -->
-<main class="content">
+  <!-- CONTENT -->
+  <main class="content">
 
-<input type="text" id="searchInput" placeholder="Cari dokumen (HSQ-xxx / judul)">
+    <input type="text" id="searchInput" placeholder="Cari dokumen (HSQ-xxx / judul)">
 
-<section id="A" class="qms-section">
-<h2>Pendidikan & SDM</h2>
-<a onclick="openPDF('assets/pdf/A_Pendidikan/HSQ-001.pdf')">HSQ-001 – Pendidikan / Pelatihan</a>
-<a onclick="openPDF('assets/pdf/A_Pendidikan/HSQ-060.pdf')">HSQ-060 – Pergantian Operator</a>
-</section>
+    <section id="A" class="qms-section">
+      <h2>Pendidikan & SDM</h2>
+      <a onclick="openPDF('assets/pdf/A_Pendidikan/HSQ-001.pdf')">HSQ-001 – Pendidikan / Pelatihan</a>
+      <a onclick="openPDF('assets/pdf/A_Pendidikan/HSQ-060.pdf')">HSQ-060 – Pergantian Operator</a>
+    </section>
 
-<section id="B" class="qms-section">
-<h2>Produksi & Proses</h2>
-<a onclick="openPDF('assets/pdf/B_Produksi/HSQ-010.pdf')">HSQ-010 – Pengelolaan Jig</a>
-<a onclick="openPDF('assets/pdf/B_Produksi/HSQ-020.pdf')">HSQ-020 – Produk Awal</a>
-<a onclick="openPDF('assets/pdf/B_Produksi/HSQ-021.pdf')">HSQ-021 – Titik Perubahan</a>
-</section>
+    <section id="B" class="qms-section">
+      <h2>Produksi & Proses</h2>
+      <a onclick="openPDF('assets/pdf/B_Produksi/HSQ-010.pdf')">HSQ-010 – Pengelolaan Jig</a>
+      <a onclick="openPDF('assets/pdf/B_Produksi/HSQ-020.pdf')">HSQ-020 – Produk Awal</a>
+      <a onclick="openPDF('assets/pdf/B_Produksi/HSQ-021.pdf')">HSQ-021 – Titik Perubahan</a>
+    </section>
 
-<section id="C" class="qms-section">
-<h2>Kualitas</h2>
-<a onclick="openPDF('assets/pdf/C_Kualitas/HSQ-030.pdf')">HSQ-030 – Tindakan Korektif</a>
-<a onclick="openPDF('assets/pdf/C_Kualitas/HSQ-040.pdf')">HSQ-040 – Mutu Internal</a>
-</section>
+    <section id="C" class="qms-section">
+      <h2>Kualitas</h2>
+      <a onclick="openPDF('assets/pdf/C_Kualitas/HSQ-030.pdf')">HSQ-030 – Tindakan Korektif</a>
+      <a onclick="openPDF('assets/pdf/C_Kualitas/HSQ-040.pdf')">HSQ-040 – Mutu Internal</a>
+    </section>
 
-<section id="G" class="qms-section">
-<h2>Manajemen Dokumen</h2>
-<a onclick="openPDF('assets/pdf/G_Manajemen_Dokumen/HS-001.pdf')">HS-001 – Format Pedoman</a>
-</section>
+    <section id="G" class="qms-section">
+      <h2>Manajemen Dokumen</h2>
+      <a onclick="openPDF('assets/pdf/G_Manajemen_Dokumen/HS-001.pdf')">HS-001 – Format Pedoman</a>
+    </section>
 
-</main>
+  </main>
 
-<!-- PDF VIEWER -->
-<aside class="viewer">
-  <p class="viewer-title">📄 PDF Viewer</p>
-  <iframe id="pdfViewer"></iframe>
-</aside>
+  <!-- PDF VIEWER -->
+  <aside class="viewer">
+    <p class="viewer-title">📄 PDF Viewer</p>
+    <iframe id="pdfViewer"></iframe>
+  </aside>
 
 </div>
 
-<!-- 🔐 FIREBASE PROTEKSI & LOGOUT -->
+<!-- 🔐 FIREBASE PROTEKSI + LOGOUT -->
 <script type="module">
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js";
   import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-auth.js";
 
+  // 🔹 CONFIG RESMI DARI FIREBASE (CONFIG TAB)
   const firebaseConfig = {
-    apiKey: "AIzaSyDh41eDkNZbKrYCAo8wOE0DEe0Uy0Z1uLA",
+    apiKey: "AIzaSyDh41eDkNZbKrYCAo8wOE0DEe0UyOZIulA",
     authDomain: "qms-hki.firebaseapp.com",
     projectId: "qms-hki",
-    storageBucket: "qms-hki.appspot.com",
+    storageBucket: "qms-hki.firebasestorage.app",
     messagingSenderId: "718676500560",
     appId: "1:718676500560:web:4eb93417bd3f5c14d1f155"
   };
@@ -86,14 +87,14 @@
   const app = initializeApp(firebaseConfig);
   const auth = getAuth(app);
 
-  // 🔒 Proteksi halaman
+  // 🔒 PROTEKSI HALAMAN
   onAuthStateChanged(auth, user => {
     if (!user) {
       window.location.href = "login.html";
     }
   });
 
-  // 🔓 Logout
+  // 🔓 LOGOUT
   document.getElementById("logoutBtn").addEventListener("click", () => {
     signOut(auth).then(() => {
       window.location.href = "login.html";
