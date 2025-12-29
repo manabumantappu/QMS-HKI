@@ -5,6 +5,10 @@ function isMobile() {
 function openPDF(path) {
   const viewer = document.getElementById("pdfViewer");
   const mobileBtn = document.getElementById("mobileOpenBtn");
+   const newTabBtn = document.getElementById("openNewTab");
+  viewer.src = path;
+  newTabBtn.href = path;
+  }
 
   if (isMobile()) {
     // HP: buka tab baru
