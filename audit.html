@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Audit Log | QMS HKI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="top-header">
+  <h1>Audit Log</h1>
+  <p>QMS HKI – Riwayat Login / Logout</p>
+</header>
+
+<main class="content">
+
+  <table id="auditTable" style="width:100%; border-collapse:collapse;">
+    <thead>
+      <tr style="background:#1f3c88; color:white;">
+        <th style="padding:8px;">No</th>
+        <th style="padding:8px;">Email</th>
+        <th style="padding:8px;">Aksi</th>
+        <th style="padding:8px;">Waktu</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+</main>
+
+<script>
+  const logs = JSON.parse(localStorage.getItem("qms_audit")) || [];
+  const tbody = document.querySelector("#auditTable tbody");
+
+  if (logs.length === 0) {
+    tbody.innerHTML = `
+      <tr>
+        <td colspan="4" style="text-align:center; padding:12px;">
+          Belum ada data audit
+        </td>
+      </tr>
+    `;
+  } else {
+    logs.forEach((log, i) => {
+      const row = document.createElement("tr");
+      row.innerHTML = `
+        <td style="padding:8px; text-align:center;">${i + 1}</td>
+        <td style="padding:8px;">${log.email}</td>
+        <td style="padding:8px; text-transform:capitalize;">${log.action}</td>
+        <td style="padding:8px;">${log.time}</td>
+      `;
+      tbody.appendChild(row);
+    });
+  }
+</script>
+
+</body>
+</html>
