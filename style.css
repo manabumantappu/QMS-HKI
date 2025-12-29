@@ -349,9 +349,9 @@ body {
 }
 /* ===== QMS ANNOUNCEMENT BANNER ===== */
 .qms-announcement {
-  background: #fffbea;
+  background: #fff1f1;
   border: 1px solid #f0e6b8;
-  border-left: 6px solid #f4b400;
+  border-left: 6px solid #c62828;
   padding: 16px 20px;
   border-radius: 8px;
   margin-bottom: 30px;
