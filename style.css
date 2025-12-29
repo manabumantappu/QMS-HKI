@@ -272,3 +272,16 @@ body {
   font-weight: 600;
   border-radius: 4px;
 }
+/* ===== MOBILE ACTIVE FIX ===== */
+@media (max-width: 768px) {
+  .qms-section a.active {
+    background: #e3e8ff;   /* lebih terang */
+    color: #1f3c88;        /* teks tetap gelap */
+    font-weight: 600;
+  }
+
+  /* Hilangkan highlight biru bawaan browser */
+  .qms-section a {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
