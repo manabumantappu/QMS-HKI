@@ -9,13 +9,7 @@
 
 <body>
 
-  <script>
-  const role = localStorage.getItem("qms_role");
-  if (!role) {
-    window.location.href = "login.html";
-  }
-</script>
-
+ 
 <!-- HEADER -->
 <header class="top-header">
   <img src="assets/img/logo-hki.png" class="logo">
@@ -93,5 +87,38 @@
 </div>
 
 <script src="app.js"></script>
+
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js";
+  import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-auth.js";
+
+  // 🔹 FIREBASE CONFIG (SAMA DENGAN login.html)
+  const firebaseConfig = {
+    apiKey: "AIzaSyDh41eDkNZbKrYCAo8wOE0DEe0Uy0Z1uLA",
+    authDomain: "qms-hki.firebaseapp.com",
+    projectId: "qms-hki",
+    storageBucket: "qms-hki.appspot.com",
+    messagingSenderId: "718676500560",
+    appId: "1:718676500560:web:4eb93417bd3f5c14d1f155"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+
+  // 🔒 PROTEKSI HALAMAN (WAJIB LOGIN)
+  onAuthStateChanged(auth, user => {
+    if (!user) {
+      window.location.href = "login.html";
+    }
+  });
+
+  // 🔓 LOGOUT
+  document.getElementById("logoutBtn").addEventListener("click", () => {
+    signOut(auth).then(() => {
+      window.location.href = "login.html";
+    });
+  });
+</script>
+  
 </body>
 </html>
