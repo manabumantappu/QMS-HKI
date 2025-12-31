@@ -410,6 +410,7 @@ body.dark .qms-section a.active {
 .announcement-box {
   border-left: 6px solid #c62828;
   background: #fff5f5;
+   margin-top: 20px;
 }
 
 .info-box {
