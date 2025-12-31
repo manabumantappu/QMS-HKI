@@ -5,187 +5,94 @@
   <title>QMS HKI | Dokumen</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-GX76H3CL0L"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-GX76H3CL0L');
-</script>
-  
 </head>
 
 <body>
 
-<!-- HEADER -->
+<!-- ================= HEADER ================= -->
 <header class="top-header">
   <img src="assets/img/logo-hki.png" class="logo" alt="HKI Logo">
+
   <div>
-   <h1 
-  data-id="QMS HKI" 
-  data-jp="QMS HKI">
-  QMS HKI
-</h1>
-
-<p 
-  data-id="Quality Management System" 
-  data-jp="品質マネジメントシステム">
-  Quality Management System
-</p>
+    <h1 data-id="QMS HKI" data-jp="QMS HKI">QMS HKI</h1>
+    <p data-id="Quality Management System"
+       data-jp="品質マネジメントシステム">
+       Quality Management System
+    </p>
   </div>
-  <div class="lang-switch">
-  <button onclick="setLang('id')">ID</button>
-  <button onclick="setLang('jp')">JP</button>
-</div>
 
-  <button id="logoutBtn" class="logout-btn"
-          data-id="Logout" data-jp="ログアウト">
+  <div class="lang-switch">
+    <button onclick="setLang('id')">ID</button>
+    <button onclick="setLang('jp')">JP</button>
+  </div>
+
+  <button id="logoutBtn"
+          class="logout-btn"
+          data-id="Logout"
+          data-jp="ログアウト">
     Logout
   </button>
 </header>
 
+<!-- ================= LAYOUT ================= -->
 <div class="layout">
 
-  <!-- SIDEBAR -->
-  <!-- SIDEBAR -->
+<!-- ================= SIDEBAR ================= -->
 <aside class="sidebar">
   <h3 data-id="Menu" data-jp="メニュー">Menu</h3>
 
-  <a href="#A"
-     data-id="Pendidikan & SDM"
-     data-jp="教育・人材">
-     Pendidikan & SDM
-  </a>
-
-  <a href="#B"
-     data-id="Produksi & Proses"
-     data-jp="製造・工程">
-     Produksi & Proses
-  </a>
-
-  <a href="#C"
-     data-id="Kualitas & Ketidaksesuaian"
-     data-jp="品質・不適合">
-     Kualitas & Ketidaksesuaian
-  </a>
-
-  <a href="#G"
-     data-id="Manajemen Dokumen"
-     data-jp="文書管理">
-     Manajemen Dokumen
-  </a>
-
-  <a href="audit.html"
-     data-id="Audit Log"
-     data-jp="監査ログ">
-     Audit Log
-  </a>
+  <a href="#A" data-id="Pendidikan & SDM" data-jp="教育・人材">Pendidikan & SDM</a>
+  <a href="#B" data-id="Produksi & Proses" data-jp="製造・工程">Produksi & Proses</a>
+  <a href="#C" data-id="Kualitas & Ketidaksesuaian" data-jp="品質・不適合">Kualitas & Ketidaksesuaian</a>
+  <a href="#D" data-id="Inspeksi, Alat & Peralatan" data-jp="検査・測定機器">Inspeksi & Alat</a>
+  <a href="#E" data-id="Material & Vendor" data-jp="資材・仕入先">Material & Vendor</a>
+  <a href="#F" data-id="Teknik & Engineering" data-jp="技術・エンジニアリング">Teknik</a>
+  <a href="#G" data-id="Manajemen Dokumen" data-jp="文書管理">Manajemen Dokumen</a>
+  <a href="audit.html" data-id="Audit Log" data-jp="監査ログ">Audit Log</a>
 </aside>
 
+<!-- ================= CONTENT ================= -->
+<main class="content">
 
-  <!-- CONTENT -->
-  <main class="content">
+<input type="text"
+       id="searchInput"
+       placeholder="Cari dokumen (HSQ-xxx / judul)">
 
-    <input type="text" id="searchInput" placeholder="Cari dokumen (HSQ-xxx / judul)">
-
-    <section id="A" class="qms-section">
-     <h2 data-id="Pendidikan & SDM"
-    data-jp="教育・人材">
-    Pendidikan & SDM
-</h2>
-      <a onclick="openPDF('assets/pdf/A_Pendidikan/HSQ-001.pdf', this)">HSQ-001 – Pendidikan / Pelatihan</a>
-      <a onclick="openPDF('assets/pdf/A_Pendidikan/HSQ-060.pdf', this)">HSQ-060 – Pergantian Operator</a>
-    </section>
-
-    <section id="B" class="qms-section">
-      <h2 data-id="Produksi & Proses"
-    data-jp="製造・工程">
-    Produksi & Proses
-</h2>
-      <a onclick="openPDF('assets/pdf/B_Produksi/HSQ-010.pdf', this)">HSQ-010 – Pengelolaan Jig</a>
-      <a onclick="openPDF('assets/pdf/B_Produksi/HSQ-020.pdf', this)">HSQ-020 – Produk Awal</a>
-      <a onclick="openPDF('assets/pdf/B_Produksi/HSQ-021.pdf', this)">HSQ-021 – Titik Perubahan</a>
-      <a onclick="openPDF('assets/pdf/B_Produksi/HSQ-002.pdf', this)">HSQ-002 – Perbaikan Kebocoran pada Welding Tank
-  </a>
-  <a onclick="openPDF('assets/pdf/B_Produksi/HSQ-031.pdf', this)">HSQ-031 – Penanganan Ketidaksesuaian Produk (Produksi Internal)
-  </a>
-  <a onclick="openPDF('assets/pdf/B_Produksi/HSQ-170.pdf', this)">HSQ-170 – Penanganan Barang Tertunda karena Perbaikan Cacat
-  </a>
-  <a onclick="openPDF('assets/pdf/B_Produksi/HSQ-180.pdf', this)">HSQ-180 – Buku Pedoman Pengelolaan Program Laser
-  </a>
-    </section>
-
-    <section id="C" class="qms-section">
-     <h2 data-id="Kualitas & Ketidaksesuaian"
-    data-jp="品質・不適合">
-    Kualitas & Ketidaksesuaian
-</h2>
-      <a onclick="openPDF('assets/pdf/C_Kualitas/HSQ-030.pdf', this)">HSQ-030 – Tindakan Korektif</a>
-      <a onclick="openPDF('assets/pdf/C_Kualitas/HSQ-040.pdf', this)">HSQ-040 – Mutu Internal</a>
-       <a onclick="openPDF('assets/pdf/C_Kualitas/HSQ-050.pdf', this)">HSQ-050 – Penanggung Jawab Jaminan Mutu
-  </a>
-  <a onclick="openPDF('assets/pdf/C_Kualitas/HSQ-080.pdf', this)">HSQ-080 – Laporan Ketidaksesuaian / Cacat
-  </a>
-    </section>
-
-    <section id="D" class="qms-section">
- <h2 data-id="Inspeksi, Alat & Peralatan"
-    data-jp="検査・測定機器">
-    Inspeksi, Alat & Peralatan
-</h2>
-  <a onclick="openPDF('assets/pdf/D_Inspeksi/HSQ-011.pdf', this)">HSQ-011 – Pemeriksaan Cetakan (Mold)
-  </a>
-  <a onclick="openPDF('assets/pdf/D_Inspeksi/HSQ-090.pdf', this)">HSQ-090 – Penyusunan Item Jaminan Proses Produksi
-  </a>
-  <a onclick="openPDF('assets/pdf/D_Inspeksi/HSQ-100.pdf', this)">HSQ-100 – Penyusunan Dokumen Standar Inspeksi
-  </a>
-  <a onclick="openPDF('assets/pdf/D_Inspeksi/HSQ-110.pdf', this)">HSQ-110 – Pengelolaan Alat Ukur
-  </a>
-  <a onclick="openPDF('assets/pdf/D_Inspeksi/HSQ-120.pdf', this)">HSQ-120 – Pemeriksaan Berkala Peralatan
-  </a>
-</section>
-    <section id="E" class="qms-section">
- <h2 data-id="Material & Vendor"
-    data-jp="資材・仕入先">
-    Material & Vendor
-</h2>
-  <a onclick="openPDF('assets/pdf/E_Material/HSQ-130.pdf', this)">HSQ-130 – Pengelolaan Material / Bahan
-  </a>
-  <a onclick="openPDF('assets/pdf/E_Material/HSQ-150.pdf', this)">HSQ-150 – Pemilihan Pemasok / Vendor
-  </a>
-  <a onclick="openPDF('assets/pdf/E_Material/HSQ-160.pdf', this)">HSQ-160 – Pengelolaan Pekerjaan Subkontrak
-  </a>
+<!-- ===== A ===== -->
+<section id="A" class="qms-section">
+  <h2 data-id="Pendidikan & SDM" data-jp="教育・人材">Pendidikan & SDM</h2>
+  <a onclick="openPDF('assets/pdf/A_Pendidikan/HSQ-001.pdf', this)">HSQ-001 – Pendidikan / Pelatihan</a>
+  <a onclick="openPDF('assets/pdf/A_Pendidikan/HSQ-060.pdf', this)">HSQ-060 – Pergantian Operator</a>
 </section>
 
-    <section id="F" class="qms-section">
-  <h2 data-id="Material & Vendor"
-    data-jp="資材・仕入先">
-    Material & Vendor
-</h2>
-  <a onclick="openPDF('assets/pdf/F_Teknik/HSQ-070.pdf', this)">HSQ-070 – Pengelolaan Drawing dan KES
-  </a>
-  <a onclick="openPDF('assets/pdf/F_Teknik/HSQ-140.pdf', this)">HSQ-140 – Pengelolaan Kunci Torsi (Torque Wrench)
-  </a>
+<!-- ===== B ===== -->
+<section id="B" class="qms-section">
+  <h2 data-id="Produksi & Proses" data-jp="製造・工程">Produksi & Proses</h2>
+  <a onclick="openPDF('assets/pdf/B_Produksi/HSQ-010.pdf', this)">HSQ-010 – Pengelolaan Jig</a>
+  <a onclick="openPDF('assets/pdf/B_Produksi/HSQ-020.pdf', this)">HSQ-020 – Produk Awal</a>
+  <a onclick="openPDF('assets/pdf/B_Produksi/HSQ-021.pdf', this)">HSQ-021 – Titik Perubahan</a>
+  <a onclick="openPDF('assets/pdf/B_Produksi/HSQ-002.pdf', this)">HSQ-002 – Perbaikan Kebocoran Welding Tank</a>
 </section>
-    
-    <section id="G" class="qms-section">
-     <h2 data-id="Manajemen Dokumen"
-    data-jp="文書管理">
-    Manajemen Dokumen
-</h2>
-       <a onclick="openPDF('assets/pdf/G_Manajemen_Dokumen/HKI_Quality_Manual.pdf', this)">HKI Quality Manual</a>
-      <a onclick="openPDF('assets/pdf/G_Manajemen_Dokumen/HS-001.pdf', this)">HS-001 – Format Pedoman</a>
-     <a onclick="openPDF('assets/pdf/G_Manajemen_Dokumen/HS-002.pdf', this)">HS-002 – Manajemen Dokumen – Penetapan Format Standar Prosedur Kerja  </a>
-  <a onclick="openPDF('assets/pdf/G_Manajemen_Dokumen/HS-003.pdf', this)">HS-003 – Pedoman Pengelolaan Gambar Teknik dan KES </a>
-    </section>
 
-  </main>
+<!-- ===== C ===== -->
+<section id="C" class="qms-section">
+  <h2 data-id="Kualitas & Ketidaksesuaian" data-jp="品質・不適合">Kualitas & Ketidaksesuaian</h2>
+  <a onclick="openPDF('assets/pdf/C_Kualitas/HSQ-030.pdf', this)">HSQ-030 – Tindakan Korektif</a>
+  <a onclick="openPDF('assets/pdf/C_Kualitas/HSQ-040.pdf', this)">HSQ-040 – Mutu Internal</a>
+</section>
 
-  <!-- PDF VIEWER -->
-  <aside class="viewer">
+<!-- ===== G ===== -->
+<section id="G" class="qms-section">
+  <h2 data-id="Manajemen Dokumen" data-jp="文書管理">Manajemen Dokumen</h2>
+  <a onclick="openPDF('assets/pdf/G_Manajemen_Dokumen/HKI_Quality_Manual.pdf', this)">HKI Quality Manual</a>
+  <a onclick="openPDF('assets/pdf/G_Manajemen_Dokumen/HS-001.pdf', this)">HS-001 – Format Pedoman</a>
+  <a onclick="openPDF('assets/pdf/G_Manajemen_Dokumen/HS-002.pdf', this)">HS-002 – Format Standar Prosedur Kerja</a>
+</section>
+
+</main>
+
+<!-- ================= PDF VIEWER ================= -->
+<aside class="viewer">
   <div class="viewer-header">
     <p class="viewer-title">📄 PDF Viewer</p>
     <a id="openNewTab" class="open-new-tab" target="_blank">
@@ -194,36 +101,34 @@
   </div>
 
   <iframe id="pdfViewer"></iframe>
-    <a id="openNewTab"></a>
-<a id="mobileOpenBtn"></a>
+
+  <a id="mobileOpenBtn"
+     class="mobile-open"
+     target="_blank">
+     📥 Buka PDF
+  </a>
 </aside>
 
-<!-- 🔐 FIREBASE PROTEKSI + LOGOUT -->
+</div>
+
+<!-- ================= FIREBASE AUTH ================= -->
 <script type="module">
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js";
   import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-auth.js";
 
-  // 🔹 CONFIG RESMI DARI FIREBASE (CONFIG TAB)
   const firebaseConfig = {
     apiKey: "AIzaSyDh41eDkNZbKrYCAo8wOE0DEe0UyOZIulA",
     authDomain: "qms-hki.firebaseapp.com",
-    projectId: "qms-hki",
-    storageBucket: "qms-hki.firebasestorage.app",
-    messagingSenderId: "718676500560",
-    appId: "1:718676500560:web:4eb93417bd3f5c14d1f155"
+    projectId: "qms-hki"
   };
 
   const app = initializeApp(firebaseConfig);
   const auth = getAuth(app);
 
-  // 🔒 PROTEKSI HALAMAN
   onAuthStateChanged(auth, user => {
-    if (!user) {
-      window.location.href = "login.html";
-    }
+    if (!user) window.location.href = "login.html";
   });
 
-  // 🔓 LOGOUT
   document.getElementById("logoutBtn").addEventListener("click", () => {
     signOut(auth).then(() => {
       window.location.href = "login.html";
