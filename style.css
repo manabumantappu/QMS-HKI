@@ -231,11 +231,14 @@ body {
 }
 
 @media (max-width: 768px) {
-
-  .layout {
-    flex-direction: column;
-    height: auto;
+  .logout-btn {
+    font-size: 13.5px;
+    height: 38px;
+    min-width: 104px;
+    padding: 0 14px;
   }
+}
+
 
   .sidebar {
     display: none;
@@ -279,11 +282,44 @@ body {
   }
 
   .lang-switch button,
-  .logout-btn {
-    font-size: 12px;
-    padding: 6px 10px;
-  }
+ /* ===== LOGOUT BUTTON (FIX CENTER + SIZE) ===== */
+.logout-btn {
+  background: #c62828;
+  color: #ffffff;
+  border: none;
+
+  min-width: 110px;      /* lebih lega untuk ログアウト */
+  height: 40px;
+
+  padding: 0 18px;
+
+  font-size: 14.5px;     /* lebih besar, aman JP/ID */
+  font-weight: 600;
+  letter-spacing: 0.3px;
+
+  border-radius: 6px;
+  cursor: pointer;
+
+  display: flex;         /* 🔑 kunci center */
+  align-items: center;   /* vertical center */
+  justify-content: center; /* horizontal center */
+
+  line-height: 1;        /* HAPUS efek aneh line-height */
+  white-space: nowrap;
+
+  -webkit-tap-highlight-color: transparent;
 }
+
+.logout-btn:hover {
+  background: #b71c1c;
+}
+
+.logout-btn:focus,
+.logout-btn:active {
+  outline: none;
+  box-shadow: none;
+}
+
 
 
 /* =====================================================
