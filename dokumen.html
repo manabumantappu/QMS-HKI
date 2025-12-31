@@ -44,7 +44,7 @@
   <a href="#A" data-id="Pendidikan & SDM" data-jp="教育・人材">Pendidikan & SDM</a>
   <a href="#B" data-id="Produksi & Proses" data-jp="製造・工程">Produksi & Proses</a>
   <a href="#C" data-id="Kualitas & Ketidaksesuaian" data-jp="品質・不適合">Kualitas & Ketidaksesuaian</a>
-  <a href="#D" data-id="Inspeksi, Alat & Peralatan" data-jp="検査・測定機器">Inspeksi & Alat</a>
+  <a href="#D" data-id="Inspeksi & Alat" data-jp="検査・測定機器">Inspeksi & Alat</a>
   <a href="#E" data-id="Material & Vendor" data-jp="資材・仕入先">Material & Vendor</a>
   <a href="#F" data-id="Teknik & Engineering" data-jp="技術・エンジニアリング">Teknik</a>
   <a href="#G" data-id="Manajemen Dokumen" data-jp="文書管理">Manajemen Dokumen</a>
@@ -58,35 +58,93 @@
        id="searchInput"
        placeholder="Cari dokumen (HSQ-xxx / judul)">
 
-<!-- ===== A ===== -->
+<!-- ===== A. Pendidikan & SDM ===== -->
 <section id="A" class="qms-section">
   <h2 data-id="Pendidikan & SDM" data-jp="教育・人材">Pendidikan & SDM</h2>
-  <a onclick="openPDF('assets/pdf/A_Pendidikan/HSQ-001.pdf', this)">HSQ-001 – Pendidikan / Pelatihan</a>
-  <a onclick="openPDF('assets/pdf/A_Pendidikan/HSQ-060.pdf', this)">HSQ-060 – Pergantian Operator</a>
+
+  <a onclick="openPDF('assets/pdf/A_Pendidikan/HSQ-001.pdf', this)"
+     data-id="HSQ-001 – Pendidikan / Pelatihan"
+     data-jp="HSQ-001 – 教育・訓練要領">
+     HSQ-001 – Pendidikan / Pelatihan
+  </a>
+
+  <a onclick="openPDF('assets/pdf/A_Pendidikan/HSQ-060.pdf', this)"
+     data-id="HSQ-060 – Pergantian Operator"
+     data-jp="HSQ-060 – 作業者交代管理要領">
+     HSQ-060 – Pergantian Operator
+  </a>
 </section>
 
-<!-- ===== B ===== -->
+<!-- ===== B. Produksi & Proses ===== -->
 <section id="B" class="qms-section">
   <h2 data-id="Produksi & Proses" data-jp="製造・工程">Produksi & Proses</h2>
-  <a onclick="openPDF('assets/pdf/B_Produksi/HSQ-010.pdf', this)">HSQ-010 – Pengelolaan Jig</a>
-  <a onclick="openPDF('assets/pdf/B_Produksi/HSQ-020.pdf', this)">HSQ-020 – Produk Awal</a>
-  <a onclick="openPDF('assets/pdf/B_Produksi/HSQ-021.pdf', this)">HSQ-021 – Titik Perubahan</a>
-  <a onclick="openPDF('assets/pdf/B_Produksi/HSQ-002.pdf', this)">HSQ-002 – Perbaikan Kebocoran Welding Tank</a>
+
+  <a onclick="openPDF('assets/pdf/B_Produksi/HSQ-010.pdf', this)"
+     data-id="HSQ-010 – Pengelolaan Jig"
+     data-jp="HSQ-010 – 治具管理要領">
+     HSQ-010 – Pengelolaan Jig
+  </a>
+
+  <a onclick="openPDF('assets/pdf/B_Produksi/HSQ-020.pdf', this)"
+     data-id="HSQ-020 – Produk Awal"
+     data-jp="HSQ-020 – 初品管理要領">
+     HSQ-020 – Produk Awal
+  </a>
+
+  <a onclick="openPDF('assets/pdf/B_Produksi/HSQ-021.pdf', this)"
+     data-id="HSQ-021 – Titik Perubahan"
+     data-jp="HSQ-021 – 変更点管理要領">
+     HSQ-021 – Titik Perubahan
+  </a>
+
+  <a onclick="openPDF('assets/pdf/B_Produksi/HSQ-002.pdf', this)"
+     data-id="HSQ-002 – Perbaikan Kebocoran Welding Tank"
+     data-jp="HSQ-002 – 溶接タンク漏れ是正要領">
+     HSQ-002 – Perbaikan Kebocoran Welding Tank
+  </a>
 </section>
 
-<!-- ===== C ===== -->
+<!-- ===== C. Kualitas ===== -->
 <section id="C" class="qms-section">
-  <h2 data-id="Kualitas & Ketidaksesuaian" data-jp="品質・不適合">Kualitas & Ketidaksesuaian</h2>
-  <a onclick="openPDF('assets/pdf/C_Kualitas/HSQ-030.pdf', this)">HSQ-030 – Tindakan Korektif</a>
-  <a onclick="openPDF('assets/pdf/C_Kualitas/HSQ-040.pdf', this)">HSQ-040 – Mutu Internal</a>
+  <h2 data-id="Kualitas & Ketidaksesuaian"
+      data-jp="品質・不適合">
+      Kualitas & Ketidaksesuaian
+  </h2>
+
+  <a onclick="openPDF('assets/pdf/C_Kualitas/HSQ-030.pdf', this)"
+     data-id="HSQ-030 – Tindakan Korektif"
+     data-jp="HSQ-030 – 是正処置要領">
+     HSQ-030 – Tindakan Korektif
+  </a>
+
+  <a onclick="openPDF('assets/pdf/C_Kualitas/HSQ-040.pdf', this)"
+     data-id="HSQ-040 – Mutu Internal"
+     data-jp="HSQ-040 – 社内品質管理要領">
+     HSQ-040 – Mutu Internal
+  </a>
 </section>
 
-<!-- ===== G ===== -->
+<!-- ===== G. Manajemen Dokumen ===== -->
 <section id="G" class="qms-section">
   <h2 data-id="Manajemen Dokumen" data-jp="文書管理">Manajemen Dokumen</h2>
-  <a onclick="openPDF('assets/pdf/G_Manajemen_Dokumen/HKI_Quality_Manual.pdf', this)">HKI Quality Manual</a>
-  <a onclick="openPDF('assets/pdf/G_Manajemen_Dokumen/HS-001.pdf', this)">HS-001 – Format Pedoman</a>
-  <a onclick="openPDF('assets/pdf/G_Manajemen_Dokumen/HS-002.pdf', this)">HS-002 – Format Standar Prosedur Kerja</a>
+
+  <a onclick="openPDF('assets/pdf/G_Manajemen_Dokumen/HKI_Quality_Manual.pdf', this)"
+     data-id="HKI Quality Manual"
+     data-jp="品質マニュアル">
+     HKI Quality Manual
+  </a>
+
+  <a onclick="openPDF('assets/pdf/G_Manajemen_Dokumen/HS-001.pdf', this)"
+     data-id="HS-001 – Format Pedoman"
+     data-jp="HS-001 – 文書様式管理規程">
+     HS-001 – Format Pedoman
+  </a>
+
+  <a onclick="openPDF('assets/pdf/G_Manajemen_Dokumen/HS-002.pdf', this)"
+     data-id="HS-002 – Format Standar Prosedur Kerja"
+     data-jp="HS-002 – 標準作業手順書様式規程">
+     HS-002 – Format Standar Prosedur Kerja
+  </a>
 </section>
 
 </main>
