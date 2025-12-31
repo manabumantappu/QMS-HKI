@@ -382,3 +382,128 @@ body {
   font-size: 12px;
   color: #666;
 }
+/* =========================================================
+   HEADER BUTTON FIX (LOGOUT + ID / JP) — MOBILE SAFE
+   ========================================================= */
+
+/* ===== LANGUAGE SWITCH ===== */
+.lang-switch {
+  display: flex;
+  gap: 6px;
+  margin-left: auto;
+}
+
+.lang-switch button {
+  background: transparent;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+
+  height: 34px;
+  min-width: 42px;
+
+  padding: 0 10px;
+  font-size: 12.5px;
+  font-weight: 600;
+
+  border-radius: 6px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  white-space: nowrap;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.lang-switch button:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+/* ===== LOGOUT BUTTON (FIX TOTAL) ===== */
+.logout-btn {
+  background: #c62828;
+  color: #ffffff;
+  border: none;
+
+  min-width: 112px;       /* aman untuk ログアウト */
+  height: 40px;
+  padding: 0 18px;
+
+  font-size: 14.5px;      /* jelas di mobile */
+  font-weight: 600;
+  letter-spacing: 0.3px;
+
+  border-radius: 6px;
+  cursor: pointer;
+
+  display: flex;          /* kunci center */
+  align-items: center;
+  justify-content: center;
+
+  line-height: 1;
+  white-space: nowrap;
+
+  -webkit-tap-highlight-color: transparent;
+}
+
+.logout-btn:hover {
+  background: #b71c1c;
+}
+
+.logout-btn:focus,
+.logout-btn:active {
+  outline: none;
+  box-shadow: none;
+}
+
+/* =========================================================
+   ACTIVE DOCUMENT FIX (MOBILE READABLE)
+   ========================================================= */
+.qms-section a.active {
+  background: #e3e8ff;    /* lembut, bukan biru gelap */
+  color: #1f3c88;         /* teks tetap terlihat */
+  font-weight: 600;
+  border-radius: 6px;
+}
+
+.qms-section a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* =========================================================
+   MOBILE HEADER ADJUSTMENT
+   ========================================================= */
+@media (max-width: 768px) {
+  .top-header {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 12px;
+  }
+
+  .top-header h1 {
+    font-size: 18px;
+    line-height: 1.2;
+    margin: 0;
+  }
+
+  .top-header p {
+    font-size: 12px;
+    margin: 2px 0 0;
+    line-height: 1.2;
+  }
+
+  .lang-switch button {
+    font-size: 12px;
+    height: 32px;
+    min-width: 40px;
+    padding: 0 8px;
+  }
+
+  .logout-btn {
+    font-size: 13.5px;
+    height: 38px;
+    min-width: 104px;
+    padding: 0 14px;
+  }
+}
