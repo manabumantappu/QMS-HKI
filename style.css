@@ -346,28 +346,38 @@ body.dark .qms-section a.active {
 }
 
 /* HERO */
+/* ===== LANDING HERO (PRO VERSION) ===== */
 .landing-hero {
-  background: linear-gradient(135deg, #1f3c88, #162e66);
+  background: linear-gradient(180deg, #1f3c88 0%, #162e66 100%);
   color: white;
   text-align: center;
-  padding: 50px 20px 40px;
+  padding: 36px 20px 32px; /* lebih ramping */
 }
 
+/* LOGO */
 .landing-hero img {
-  height: 70px;
-  margin-bottom: 12px;
+  height: 52px;          /* 🔑 diperkecil */
+  max-width: 160px;
+  margin-bottom: 10px;
+  object-fit: contain;
 }
 
+/* TITLE */
 .landing-hero h1 {
   margin: 0;
-  font-size: 28px;
+  font-size: 22px;       /* lebih proporsional */
+  font-weight: 700;
+  letter-spacing: 0.5px;
 }
 
+/* SUBTITLE */
 .landing-hero p {
   margin: 4px 0 0;
-  font-size: 14px;
+  font-size: 13px;
+  font-weight: 400;
   opacity: 0.9;
 }
+
 
 /* MAIN */
 .landing-main {
