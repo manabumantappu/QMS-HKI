@@ -41,6 +41,10 @@ document.getElementById("searchInput").addEventListener("keyup", function () {
       : "none";
   });
 });
+
+// load bahasa terakhir
+const savedLang = localStorage.getItem("qms_lang") || "id";
+setLang(savedLang);
 /* ===== LANGUAGE SWITCH (ID / JP) ===== */
 function setLang(lang) {
   document.querySelectorAll("[data-id]").forEach(el => {
@@ -49,7 +53,6 @@ function setLang(lang) {
   localStorage.setItem("qms_lang", lang);
 }
 
-// load bahasa terakhir
 const savedLang = localStorage.getItem("qms_lang") || "id";
 setLang(savedLang);
 
