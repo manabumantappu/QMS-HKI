@@ -9,63 +9,128 @@
 
 <body class="landing-page">
 
-<!-- HERO -->
+<!-- ===== HERO ===== -->
 <section class="landing-hero">
   <div class="hero-inner">
+
     <img src="assets/img/logo-hki.png" alt="HKI Logo" class="hero-logo">
 
     <div class="hero-text">
       <h1>QMS HKI</h1>
-      <p>Quality Management System</p>
+      <p data-id="Quality Management System"
+         data-jp="品質マネジメントシステム">
+         Quality Management System
+      </p>
     </div>
+
+    <!-- LANGUAGE SWITCH -->
+    <div class="lang-switch">
+      <button onclick="setLang('id')">ID</button>
+      <button onclick="setLang('jp')">JP</button>
+    </div>
+
   </div>
 </section>
 
-
 <main class="landing-main">
 
-  <!-- PENGUMUMAN -->
+  <!-- ===== PENGUMUMAN ===== -->
   <section class="landing-box announcement-box">
-    <h3>📢 Pengumuman QMS</h3>
+    <h3 data-id="📢 Pengumuman QMS"
+        data-jp="📢 QMS お知らせ">
+        📢 Pengumuman QMS
+    </h3>
+
     <ul>
-      <li><b>[PENTING]</b> Update dokumen <b>HSQ-181 – Pedoman Standar Ergonomi JIG</b> berlaku mulai <b>Desember 2025</b>.</li>
-      <li>Audit internal QMS dijadwalkan <b>2 Maret 2026</b>. Pastikan dokumen sudah sesuai.</li>
+      <li
+        data-id="[PENTING] Update dokumen HSQ-181 – Pedoman Standar Ergonomi JIG berlaku mulai Desember 2025."
+        data-jp="【重要】HSQ-181（治具人間工学標準要領）は2025年12月より適用されます。">
+        <b>[PENTING]</b> Update dokumen <b>HSQ-181 – Pedoman Standar Ergonomi JIG</b> berlaku mulai <b>Desember 2025</b>.
+      </li>
+
+      <li
+        data-id="Audit internal QMS dijadwalkan 2 Maret 2026. Pastikan dokumen sudah sesuai."
+        data-jp="QMS内部監査は2026年3月2日に実施予定です。文書の整合性を確認してください。">
+        Audit internal QMS dijadwalkan <b>2 Maret 2026</b>. Pastikan dokumen sudah sesuai.
+      </li>
     </ul>
   </section>
 
-  <!-- INFO -->
+  <!-- ===== TENTANG SISTEM ===== -->
   <section class="landing-box info-box">
-    <h3>📘 Tentang Sistem</h3>
-    <p>
+    <h3 data-id="📘 Tentang Sistem"
+        data-jp="📘 システムについて">
+        📘 Tentang Sistem
+    </h3>
+
+    <p
+      data-id="Sistem internal untuk pengelolaan dokumen SOP, WI, dan Formulir di lingkungan PT Hanken Indonesia (HKI)."
+      data-jp="本システムは、PT Hanken Indonesia（HKI）におけるSOP・WI・帳票文書を管理するための社内システムです。">
       Sistem internal untuk pengelolaan dokumen
       <b>SOP, WI, dan Formulir</b> di lingkungan
       <b>PT Hanken Indonesia (HKI)</b>.
     </p>
   </section>
 
-  <!-- MENU -->
+  <!-- ===== MENU ===== -->
   <section class="landing-menu">
+
     <div class="menu-card">
-      <h4>📁 Dokumen QMS</h4>
-      <p>Akses dan kelola dokumen SOP, WI, dan Formulir sesuai sistem manajemen mutu.</p>
+      <h4 data-id="📁 Dokumen QMS"
+          data-jp="📁 QMS文書">
+          📁 Dokumen QMS
+      </h4>
+
+      <p
+        data-id="Akses dan kelola dokumen SOP, WI, dan Formulir sesuai sistem manajemen mutu."
+        data-jp="品質マネジメントシステムに基づき、SOP・WI・帳票を閲覧・管理できます。">
+        Akses dan kelola dokumen SOP, WI, dan Formulir sesuai sistem manajemen mutu.
+      </p>
     </div>
 
     <div class="menu-card">
-      <h4>ℹ️ Informasi Sistem</h4>
-      <p>Panduan penggunaan sistem QMS untuk kebutuhan internal perusahaan.</p>
+      <h4 data-id="ℹ️ Informasi Sistem"
+          data-jp="ℹ️ システム情報">
+          ℹ️ Informasi Sistem
+      </h4>
+
+      <p
+        data-id="Panduan penggunaan sistem QMS untuk kebutuhan internal perusahaan."
+        data-jp="社内向けQMSシステムの使用方法を案内します。">
+        Panduan penggunaan sistem QMS untuk kebutuhan internal perusahaan.
+      </p>
     </div>
+
   </section>
 
-  <!-- LOGIN -->
-  <a href="login.html" class="landing-login-btn">
-    🔐 Masuk ke Sistem
+  <!-- ===== LOGIN ===== -->
+  <a href="login.html"
+     class="landing-login-btn"
+     data-id="🔐 Masuk ke Sistem"
+     data-jp="🔐 システムにログイン">
+     🔐 Masuk ke Sistem
   </a>
 
 </main>
 
-<footer class="landing-footer">
+<footer class="landing-footer"
+        data-id="© HKI – Internal Use Only"
+        data-jp="© HKI – 社内使用限定">
   © HKI – Internal Use Only
 </footer>
+
+<!-- ===== LANGUAGE SCRIPT ===== -->
+<script>
+  function setLang(lang) {
+    document.querySelectorAll("[data-id]").forEach(el => {
+      el.innerText = el.dataset[lang];
+    });
+    localStorage.setItem("qms_lang", lang);
+  }
+
+  // load terakhir
+  setLang(localStorage.getItem("qms_lang") || "id");
+</script>
 
 </body>
 </html>
