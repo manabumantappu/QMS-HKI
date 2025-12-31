@@ -452,3 +452,21 @@ body.dark .qms-section a.active {
   color: #666;
   margin: 30px 0;
 }
+@media (max-width: 768px) {
+  .landing-hero {
+    padding: 28px 16px 26px;
+  }
+
+  .landing-hero img {
+    height: 44px;        /* logo lebih kecil di HP */
+    margin-bottom: 8px;
+  }
+
+  .landing-hero h1 {
+    font-size: 20px;
+  }
+
+  .landing-hero p {
+    font-size: 12px;
+  }
+}
