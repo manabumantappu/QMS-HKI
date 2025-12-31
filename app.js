@@ -1,61 +1,51 @@
-/* ===============================
-   CEK MOBILE
-================================ */
+/* ================== CEK MOBILE ================== */
 function isMobile() {
   return window.innerWidth <= 768;
 }
 
-/* ===============================
-   BUKA PDF
-================================ */
-function openPDF(path, el) {
+/* ================== OPEN PDF (BILINGUAL SAFE) ================== */
+function openPDFLang(el) {
   const viewer = document.getElementById("pdfViewer");
-  const mobileBtn = document.getElementById("mobileOpenBtn");
   const newTabBtn = document.getElementById("openNewTab");
 
-  // reset active link
-  document.querySelectorAll(".qms-section a").forEach(a => {
-    a.classList.remove("active");
-  });
+  const lang = localStorage.getItem("qms_lang") || "id";
 
-  // set active link
-  if (el) el.classList.add("active");
+  let path =
+    lang === "jp"
+      ? el.dataset.pdfJp
+      : el.dataset.pdfId;
 
-  // set link buka tab baru
-  if (newTabBtn) newTabBtn.href = path;
-  if (mobileBtn) mobileBtn.href = path;
-
-  // mobile: buka tab baru
-  if (isMobile()) {
-    window.open(path, "_blank");
-    return;
+  // 🔁 FALLBACK: jika file JP belum ada
+  if (!path || path.includes("/jp/")) {
+    path = el.dataset.pdfId;
   }
 
-  // desktop: tampilkan di viewer
-  if (viewer) {
+  // highlight aktif
+  document.querySelectorAll(".qms-section a").forEach(a =>
+    a.classList.remove("active")
+  );
+  el.classList.add("active");
+
+  if (newTabBtn) newTabBtn.href = path;
+
+  if (isMobile()) {
+    window.open(path, "_blank");
+  } else {
     viewer.src = path;
   }
 }
 
-/* ===============================
-   SEARCH DOKUMEN
-================================ */
-const searchInput = document.getElementById("searchInput");
-if (searchInput) {
-  searchInput.addEventListener("keyup", function () {
-    const keyword = this.value.toLowerCase();
-
-    document.querySelectorAll(".qms-section a").forEach(link => {
-      link.style.display = link.textContent.toLowerCase().includes(keyword)
-        ? "block"
-        : "none";
-    });
+/* ================== SEARCH ================== */
+document.getElementById("searchInput")?.addEventListener("keyup", function () {
+  const keyword = this.value.toLowerCase();
+  document.querySelectorAll(".qms-section a").forEach(link => {
+    link.style.display = link.textContent.toLowerCase().includes(keyword)
+      ? "block"
+      : "none";
   });
-}
+});
 
-/* ===============================
-   LANGUAGE SWITCH (ID / JP)
-================================ */
+/* ================== LANGUAGE SWITCH ================== */
 function setLang(lang) {
   document.querySelectorAll("[data-id]").forEach(el => {
     el.innerText = el.dataset[lang];
@@ -63,6 +53,4 @@ function setLang(lang) {
   localStorage.setItem("qms_lang", lang);
 }
 
-// load bahasa terakhir
-const savedLang = localStorage.getItem("qms_lang") || "id";
-setLang(savedLang);
+setLang(localStorage.getItem("qms_lang") || "id");
