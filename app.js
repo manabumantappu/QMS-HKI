@@ -41,3 +41,15 @@ document.getElementById("searchInput").addEventListener("keyup", function () {
       : "none";
   });
 });
+/* ===== LANGUAGE SWITCH (ID / JP) ===== */
+function setLang(lang) {
+  document.querySelectorAll("[data-id]").forEach(el => {
+    el.innerText = el.dataset[lang];
+  });
+  localStorage.setItem("qms_lang", lang);
+}
+
+// load bahasa terakhir
+const savedLang = localStorage.getItem("qms_lang") || "id";
+setLang(savedLang);
+
