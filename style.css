@@ -347,36 +347,48 @@ body.dark .qms-section a.active {
 
 /* HERO */
 /* ===== LANDING HERO (PRO VERSION) ===== */
+/* ===== LANDING HERO (RAMPING & CENTER) ===== */
 .landing-hero {
   background: linear-gradient(180deg, #1f3c88 0%, #162e66 100%);
-  color: white;
-  text-align: center;
-  padding: 36px 20px 32px; /* lebih ramping */
+  padding: 28px 20px;
 }
 
-/* LOGO */
-.landing-hero img {
-  height: 52px;          /* 🔑 diperkecil */
-  max-width: 160px;
-  margin-bottom: 10px;
+/* container */
+.hero-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+
+/* logo */
+.hero-logo {
+  height: 42px;            /* 🔑 lebih kecil & profesional */
+  width: auto;
   object-fit: contain;
 }
 
-/* TITLE */
-.landing-hero h1 {
-  margin: 0;
-  font-size: 22px;       /* lebih proporsional */
-  font-weight: 700;
-  letter-spacing: 0.5px;
+/* text group */
+.hero-text {
+  text-align: left;
+  color: white;
 }
 
-/* SUBTITLE */
-.landing-hero p {
-  margin: 4px 0 0;
+.hero-text h1 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.hero-text p {
+  margin: 2px 0 0;
   font-size: 13px;
-  font-weight: 400;
   opacity: 0.9;
 }
+
 
 
 /* MAIN */
