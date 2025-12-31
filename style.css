@@ -420,3 +420,48 @@ body {
 .lang-switch button:hover {
   background: rgba(255,255,255,0.2);
 }
+/* ================= MOBILE HEADER FIX ================= */
+@media (max-width: 768px) {
+  .top-header {
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+  }
+
+  .top-header .logo {
+    height: 42px;
+  }
+
+  .top-header h1 {
+    font-size: 18px;
+    line-height: 1.2;
+    margin: 0;
+  }
+
+  .top-header p {
+    font-size: 12px;
+    line-height: 1.2;
+    margin: 2px 0 0;
+    white-space: normal; /* 🔑 jangan paksa vertikal */
+  }
+
+  /* group judul */
+  .top-header > div {
+    flex: 1;
+    min-width: 0;
+  }
+
+  /* tombol kanan */
+  .lang-switch {
+    display: flex;
+    gap: 6px;
+  }
+
+  .lang-switch button,
+  .logout-btn {
+    font-size: 12px;
+    padding: 6px 10px;
+    white-space: nowrap;
+  }
+}
