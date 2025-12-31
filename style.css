@@ -1,18 +1,24 @@
-/* ================= RESET ================= */
+/* =========================================================
+   RESET & GLOBAL
+========================================================= */
 * {
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   background: #f4f6f9;
+  color: #222;
 }
 
-/* ================= HEADER ================= */
+/* =========================================================
+   HEADER
+========================================================= */
 .top-header {
   background: #1f3c88;
-  color: #ffffff;
+  color: #fff;
   padding: 14px 20px;
   display: flex;
   align-items: center;
@@ -20,14 +26,13 @@ body {
 }
 
 .logo {
-  height: 46px;
-  width: auto;
+  height: 48px;
 }
 
-/* Judul */
+/* judul */
 .top-header h1 {
   margin: 0;
-  font-size: 22px;
+  font-size: 20px;
   line-height: 1.2;
 }
 
@@ -37,67 +42,64 @@ body {
   opacity: 0.9;
 }
 
-/* ================= LANGUAGE SWITCH ================= */
+/* =========================================================
+   LANGUAGE & LOGOUT
+========================================================= */
 .lang-switch {
+  margin-left: auto;
   display: flex;
   gap: 8px;
-  margin-left: auto;
 }
 
+/* tombol ID / JP */
 .lang-switch button {
   min-width: 44px;
-  height: 32px;
+  height: 36px;
   background: transparent;
-  border: 1px solid #ffffff;
-  color: #ffffff;
+  border: 1px solid #fff;
+  color: #fff;
   font-size: 13px;
   font-weight: 600;
   border-radius: 6px;
   cursor: pointer;
 }
 
-.lang-switch button:hover {
-  background: rgba(255,255,255,0.2);
-}
-
-/* ================= LOGOUT BUTTON ================= */
+/* tombol logout */
 .logout-btn {
-  background: #c62828;
-  color: #ffffff;
-  border: none;
-
-  min-width: 96px;
+  min-width: 110px;
   height: 36px;
-
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 36px;
-  text-align: center;
-
+  background: #d32f2f;
+  color: #fff;
+  border: none;
   border-radius: 6px;
-  cursor: pointer;
-
-  display: inline-flex;
+  font-size: 14px;
+  font-weight: 700;
+  display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 .logout-btn:hover {
   background: #b71c1c;
 }
 
-/* ================= LAYOUT ================= */
+/* =========================================================
+   LAYOUT
+========================================================= */
 .layout {
   display: flex;
   height: calc(100vh - 76px);
 }
 
-/* ================= SIDEBAR ================= */
+/* =========================================================
+   SIDEBAR
+========================================================= */
 .sidebar {
   width: 220px;
-  background: #ffffff;
+  background: #fff;
   border-right: 1px solid #ddd;
-  padding: 20px;
+  padding: 18px;
 }
 
 .sidebar h3 {
@@ -116,7 +118,9 @@ body {
   color: #1f3c88;
 }
 
-/* ================= CONTENT ================= */
+/* =========================================================
+   CONTENT
+========================================================= */
 .content {
   flex: 1;
   padding: 20px;
@@ -126,14 +130,16 @@ body {
 #searchInput {
   width: 100%;
   padding: 10px 12px;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
-/* ================= SECTION ================= */
+/* =========================================================
+   QMS SECTION
+========================================================= */
 .qms-section {
-  background: #ffffff;
-  padding: 15px;
-  margin-bottom: 20px;
+  background: #fff;
+  padding: 14px;
+  margin-bottom: 18px;
   border-left: 5px solid #1f3c88;
 }
 
@@ -144,73 +150,66 @@ body {
 .qms-section a {
   display: block;
   padding: 8px 10px;
-  cursor: pointer;
+  margin-bottom: 4px;
   border-radius: 4px;
-  color: #333;
-  text-decoration: none;
-
-  /* mobile tap fix */
-  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+  color: #222;
 }
 
+/* hover */
 .qms-section a:hover {
   background: #eef2ff;
 }
 
-/* ACTIVE LINK – AMAN DI DESKTOP & MOBILE */
+/* aktif (AMAN DI MOBILE) */
 .qms-section a.active {
   background: #e3e8ff;
   color: #1f3c88;
-  font-weight: 600;
+  font-weight: 700;
 }
 
-/* ================= PDF VIEWER ================= */
+/* =========================================================
+   PDF VIEWER
+========================================================= */
 .viewer {
   width: 40%;
-  background: #ffffff;
+  background: #fff;
   border-left: 1px solid #ddd;
-
-  display: flex;
-  flex-direction: column;
-  height: calc(100vh - 76px);
+  padding: 10px;
 }
 
 .viewer-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 6px 4px;
-  border-bottom: 1px solid #ddd;
+  margin-bottom: 8px;
 }
 
-.viewer iframe {
-  flex: 1;
-  width: 100%;
-  border: none;
-  background: #f9f9f9;
-}
-
-/* ================= OPEN NEW TAB ================= */
 .open-new-tab {
   font-size: 13px;
+  padding: 6px 10px;
+  border: 1px solid #1f3c88;
+  border-radius: 6px;
   text-decoration: none;
   color: #1f3c88;
-  border: 1px solid #1f3c88;
-  padding: 4px 8px;
-  border-radius: 4px;
 }
 
 .open-new-tab:hover {
   background: #1f3c88;
-  color: #ffffff;
+  color: #fff;
 }
 
-/* ================= MOBILE ================= */
-.mobile-open {
-  display: none;
+.viewer iframe {
+  width: 100%;
+  height: calc(100% - 40px);
+  border: none;
 }
 
+/* =========================================================
+   MOBILE MODE
+========================================================= */
 @media (max-width: 768px) {
+
   .layout {
     flex-direction: column;
     height: auto;
@@ -222,30 +221,29 @@ body {
 
   .viewer {
     width: 100%;
-    height: auto;
+    height: 65vh;
+    margin-top: 16px;
   }
 
   .viewer iframe {
-    display: none;
+    height: 55vh;
   }
 
   .mobile-open {
     display: block;
-    margin: 12px 0;
+    width: 100%;
+    margin-top: 10px;
     background: #1f3c88;
-    color: #ffffff;
-    padding: 14px;
+    color: #fff;
     text-align: center;
+    padding: 12px;
     border-radius: 6px;
-    font-weight: 600;
     text-decoration: none;
   }
 
-  /* HEADER MOBILE */
   .top-header {
     flex-wrap: wrap;
     gap: 10px;
-    padding: 12px;
   }
 
   .top-header h1 {
@@ -258,7 +256,86 @@ body {
 
   .lang-switch button,
   .logout-btn {
-    height: 32px;
     font-size: 13px;
+    height: 34px;
   }
+}
+
+/* =========================================================
+   LOGIN PAGE
+========================================================= */
+.login-page {
+  background: #1f3c88;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-box {
+  background: #fff;
+  padding: 28px;
+  max-width: 360px;
+  width: 100%;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.login-logo {
+  max-width: 180px;
+  margin-bottom: 10px;
+}
+
+.login-box input,
+.login-box button {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  font-size: 15px;
+  border-radius: 6px;
+}
+
+.login-box input {
+  border: 1px solid #ccc;
+}
+
+.login-box button {
+  background: #1f3c88;
+  border: none;
+  color: #fff;
+  font-weight: 700;
+}
+
+.login-box button:hover {
+  background: #162e66;
+}
+
+.login-note {
+  font-size: 12px;
+  color: #666;
+}
+
+/* =========================================================
+   DARK MODE (OPTIONAL)
+========================================================= */
+body.dark {
+  background: #121212;
+  color: #e0e0e0;
+}
+
+body.dark .sidebar,
+body.dark .content,
+body.dark .viewer,
+body.dark .qms-section {
+  background: #1e1e1e;
+  color: #e0e0e0;
+}
+
+body.dark .qms-section a {
+  color: #e0e0e0;
+}
+
+body.dark .qms-section a.active {
+  background: #2c3a66;
+  color: #fff;
 }
